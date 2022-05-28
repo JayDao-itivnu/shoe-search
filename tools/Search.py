@@ -7,5 +7,5 @@ class Search:
         dists = np.linalg.norm(features - query, axis=1)
         ids = np.argsort(dists)[:5]
         images = [img_paths[id] for id in ids]
-
+        # score = [dists[id] for id in ids]
         return images
